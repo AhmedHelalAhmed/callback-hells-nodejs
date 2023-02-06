@@ -1,18 +1,24 @@
 const fs = require('fs');
 
 const readFilePro = (file) => {
+  // manual make promise
   return new Promise((resolve, reject) => {
-    fs.readFile(file, (err, data) => {
-      if (err) reject('I could not find that file 😢');
+    fs.readFile(file, (error, data) => {
+      if (error) {
+        reject('I could not find that file !! ' + error.message);
+      }
       resolve(data);
     });
   });
 };
 
 const writeFilePro = (file, data) => {
+  // manual make promise
   return new Promise((resolve, reject) => {
-    fs.writeFile(file, data, (err) => {
-      if (err) reject('Could not write file 😢');
+    fs.writeFile(file, data, (error) => {
+      if (error) {
+        reject('Could not write file !! ' + error.message);
+      }
       resolve('success');
     });
   });

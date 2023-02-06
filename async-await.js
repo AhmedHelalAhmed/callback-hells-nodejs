@@ -11,8 +11,7 @@ const getDogPic = async () => {
     await writeFilePro('dog-img.txt', response.body.message);
     console.log('Random dog image saved to file!');
   } catch (error) {
-    console.log(error);
-
+    console.log(error.message);
     throw error;
   }
   return '2: READY $$';
@@ -24,7 +23,7 @@ const getDogPic = async () => {
     const getDogPicResult = await getDogPic();
     console.log(getDogPicResult);
     console.log('3: Done getting dog pics!');
-  } catch (err) {
-    console.log('ERROR @@');
+  } catch (error) {
+    console.log('ERROR @@', error.message);
   }
 })();

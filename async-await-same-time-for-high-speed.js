@@ -28,7 +28,6 @@ const getDogPic = async () => {
     console.log('Random dog image saved to file!');
   } catch (error) {
     console.log(error.message);
-
     throw error; // to throw exception in catch block in the main block
   }
   return '2: READY $$';
@@ -38,8 +37,8 @@ const getDogPic = async () => {
   try {
     // we need this lines run with order so let's put then inside async function to put a wait
     console.log('1: Will get dog pics!');
-    const x = await getDogPic(); // this will return promise so let's wait for it
-    console.log(x);
+    const getDogPicResult = await getDogPic(); // this will return promise so let's wait for it
+    console.log(getDogPicResult);
     console.log('3: Done getting dog pics!');
   } catch (error) {
     console.log('ERROR @@', error.message);
