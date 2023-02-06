@@ -1,0 +1,22 @@
+{
+  "name": "callback-hells-nodejs",
+  "version": "1.0.0",
+  "description": "callback hells in nodejs example and solutions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmedHelalAhmed/callback-hells-nodejs.git"
+  },
+  "author": "Ahmed Helal Ahmed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhmedHelalAhmed/callback-hells-nodejs/issues"
+  },
+  "homepage": "https://github.com/AhmedHelalAhmed/callback-hells-nodejs#readme",
+  "dependencies": {
+    "superagent": "^8.0.9"
+  }
+}
